@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middle ware
 app.use(express.json());
+const cors = require('cors');
 
 // Connection to db
 
