@@ -1,6 +1,7 @@
 const express = require('express');
 const Project = require('./model/Links');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const app = express();
 const URI =
     'mongodb+srv://ProjectsLinks:c9LfXyalAfT1dQMw@projects.ifutfhs.mongodb.net/?retryWrites=true&w=majority';
@@ -8,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middle ware
 app.use(express.json());
-const cors = require('cors');
+app.use(cors());
 
 // Connection to db
 
